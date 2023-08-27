@@ -75,6 +75,8 @@ button {
     align-items: center;
     justify-content: center;
     backface-visibility: hidden;
+    cursor: pointer;
+    font-size: x-large;
 }
 
 .front {
