@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+
+h2,
+button {
+    font-family: 'Concert One', cursive;
+    font-size: 1.5rem;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.btn-reset {
+    padding: 8px 10px;
+    background-color: rgb(156, 221, 205);
+    outline: none;
+    border: 2px solid rgb(156, 221, 205);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.btn-options {
+    padding: 8px 10px;
+    background-color: rgb(168, 200, 243);
+    outline: none;
+    border: 2px solid rgb(168, 200, 243);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.btn-reset:hover,
+.btn-options:hover {
+    border: 2px solid #000;
+    transition: .5s;
+}
+
+.app {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    transform-style: preserve-3d;
+    transition: .7s;
+}
+
+.sides {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: rgb(212, 167, 255);
+}
+
+.back {
+    background-color: rgb(255, 210, 217);
+    transform: rotateY(180deg);
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+@media (min-width: 768px) {
+    h2{
+        font-size: 2rem;
+    }
+    .btn-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        text-align: start;
+    }
+
+    .app {
+        width: 650px;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+    }
+    .sides{
+        font-size: xx-large;
+    }
+}
