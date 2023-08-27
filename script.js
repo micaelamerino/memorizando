@@ -1,6 +1,7 @@
 const app = document.getElementById("app");
 const btnFrutas = document.getElementById("btn-frutas");
 const btnEmojis = document.getElementById("btn-emojis");
+const btnAnimales = document.getElementById("btn-animales");
 let templateHTML = "";
 const btnReset = document.getElementById("btn-reset");
 btnReset.classList.add("hide");
@@ -34,6 +35,21 @@ let emojis = [
   "🤑",
 ];
 
+let animales = [
+  "🐸",
+  "🐴",
+  "🐢",
+  "🐓",
+  "🐷",
+  "🐴",
+  "🐟",
+  "🐢",
+  "🐓",
+  "🐷",
+  "🐸",
+  "🐟",
+];
+
 let lista = [];
 
 btnFrutas.addEventListener("click", () => {
@@ -47,6 +63,12 @@ btnEmojis.addEventListener("click", () => {
   lista = [...emojis];
   pintarJuego();
 });
+
+btnAnimales.addEventListener("click", ()=> {
+  templateHTML = "";
+  lista = [...animales];
+  pintarJuego();
+})
 
 function pintarJuego() {
   let ArrayCard = [];
